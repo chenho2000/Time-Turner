@@ -1,0 +1,81 @@
+﻿body {
+  display: block;
+}
+
+.titlefont {
+  font-size: 100px;
+}
+nav {
+  background-color: white;
+}
+.navbar-brand img {
+  max-height: 50px;
+}
+.navbar-brand {
+  color: #000c6d;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+nav ul li a {
+  color: #000c6d;
+  font-size: 20px;
+  margin: auto 20px;
+}
+nav ul li a:hover {
+  color: #000c6d;
+}
+
+section {
+  padding-top: 50px;
+}
+section h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #000c6d;
+  text-align: center;
+  margin-bottom: 20px;
+}
+section p {
+  font-size: 20px;
+}
+button {
+  border-radius: 50px !important;
+}
+
+#homepage .card {
+  border: 0;
+  box-shadow: 10px 10px 10px #c5c5c5;
+  text-align: center;
+}
+
+#homepage .col {
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+}
+#homepage .img-col {
+  justify-content: flex-end;
+}
+#homepage img {
+  max-width: 150%;
+  width: 120%;
+}
+
+#contact {
+  text-align: center;
+  background-color: #000c6d;
+  color: white;
+}
+#contact h1 {
+  text-align: center;
+  color: white;
+}
+
+.mapxz {
+  border-radius: 100%;
+}
+
+.showpage {
+  height: 500vh;
+}

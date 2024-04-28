@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Examples</title>
+    <script defer type="text/javascript" src="./Time-Turner.js"></script>
+    <script defer type="text/javascript" src="./assets/js/examples.js"></script>
+    <link rel="icon" href="./assets/Icon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="./assets/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <a name="TOP"></a>
+    <nav class="py-3 navbar navbar-expand-lg fixed-top auto-hiding-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">
+          <img class="logo" src="./assets/logo.png" /> Time Turner
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./API.html">API</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./examples.html">Examples</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Time-Turner.zip" download>Download</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col">
+            <img src="./assets/Clockex.jfif" class="img-fluid" alt="Time" />
+          </div>
+          <div class="col text-col">
+            <h1>Examples</h1>
+            <p>
+              In this page there will be examples of Time Object methods and
+              five DOM Manipulation Generator with instructions: <br />
+              (World time map (DOM manipulations), <br />
+              Simple time zone converter (DOM manipulations), <br />
+              Major city time visual representation( DOM manipulations), <br />
+              Major country time visual representation (DOM manipulations)
+              <br />
+              StopWatch (DOM manipulations) ).
+            </p>
+            <a href="#Time">
+              <button type="button" class="btn btn-warning">
+                Check Time Object Examples
+              </button></a
+            >
+            <a href="#DOM">
+              <button type="button" class="btn btn-warning">
+                Check DOM manipulations Examples
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <a name="Time"></a>
+    <br />
+    <br />
+    <br />
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col text-col">
+            <h1>
+              Time Object Methods Examples
+            </h1>
+            <div class="alert alert-success" role="alert">
+              <h4 class="alert-heading">
+                Constructor <br />(time1 will be used for most of the method
+                examples below [which is your current time])<br />
+                (all other Time object used below are created from here)
+              </h4>
+              <hr />
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <b>current time with current timezone:</b><br />
+                  const time1 = new Time();<br />
+                </li>
+                <li class="list-group-item">
+                  <b
+                    >Setting time with a dateString with current timezone:<br
+                  /></b>
+                  const time2 = new Time("July 7, 2020 00:00:00");<br />
+                </li>
+                <li class="list-group-item">
+                  <b
+                    >Setting time with a date String with given TimeZone (last
+                    number):<br
+                  /></b>
+                  const time3 = new Time("July 7, 2020 00:00:00", -4);<br />
+                </li>
+                <li class="list-group-item">
+                  <b
+                    >Setting time with given exact information with current time
+                    zone:<br />
+                    (year, MONTH INDEX (0 for Jan, 1 for Feb ....), day, hours,
+                    minutes, seconds, milliseconds)<br
+                  /></b>
+                  const time4 = new Time(2020, 6, 7, 0, 0, 0, 0);<br />
+                </li>
+                <li class="list-group-item">
+                  <b
+                    >Setting time with given exact information with given time
+                    zone (last number): <br />(year, MONTH INDEX (0 for Jan, 1
+                    for Feb ....), day, hours, minutes, seconds, milliseconds,
+                    timezone)<br
+                  /></b>
+                  const time5 = new Time(2020, 6, 7, 0, 0, 0, 0, -4);
+                </li>
+              </ul>
+            </div>
+
+            <div class="alert alert-success" role="alert">
+              <h4 class="alert-heading">
+                format() method:
+              </h4>
+              <hr />
+
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <b> time1.format("yyyy-MM-dd hh:mm:ss");</b><br /><br />
+                  The output will be:<br />
+                  <h3 id="f1"></h3>
+                </li>
+                <li class="list-group-item">
+                  <b> time1.format("yyyy/MM/dd hh:mm:ss");</b><br /><br />
+                  The output will be:<br />
+                  <h3 id="f2"></h3>
+                </li>
+                <li class="list-group-item">
+                  <b> time1.format("dd/MM/yyyy hh:mm:ss");</b><br /><br />
+                  The output will be:<br />
+                  <h3 id="f3"></h3>
+                </li>
+                <li class="list-group-item">
+                  <b> time1.format("MM/dd hh:mm");</b><br /><br />
+                  The output will be:<br />
+                  <h3 id="f4"></h3>
+                </li>
+              </ul>
+            </div>
+
+            <div class="alert alert-success" role="alert">
+              <h4 class="alert-heading">
+                setTime() method:
+              </h4>
+              <hr />
+
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <h3>set year:</h3>
+                  <br />
+                  <b> time1.setTime("y", 2019);</b><br />
+                </li>
+                <li class="list-group-item">
+                  <h3>set month:</h3>
+                  <br />
+                  <b> time1.setTime("M", 7);</b><br />
+                </li>
+                <li class="list-group-item">
+                  <h3>set day:</h3>
+                  <br />
+                  <b> time1.setTime("d", 7);</b><br />
+                </li>
+                <li class="list-group-item">
+                  <h3>set hour:</h3>
+                  <br />
+                  <b> time1.setTime("h", 0);</b><br />
+                </li>
+                <li class="list-group-item">
+                  <h3>set minutes:</h3>
+                  <br />
+                  <b> time1.setTime("m", 0);</b><br />
+                </li>
+                <li class="list-group-item">
+                  <h3>set seconds:</h3>
+                  <br />
+                  <b> time1.setTime("s", 0);</b><br />
+                </li>
+                <li class="list-group-item">
+                  <h3>set timezone:</h3>
+                  <br />
+                  <b> time1.setTime("t", 8);</b><br />
+                </li>
+
+                <li class="list-group-item">
+                  <h3>After setting it will become:</h3>
+                  (time1.format("yyyy-MM-dd hh:mm:ss");)
+                  <br />
+                  <h3 id="setTime"></h3>
+                </li>
+              </ul>
+            </div>
+
+            <div class="alert alert-success" role="alert">
+              <h4 class="alert-heading">
+                getTime() method:
+              </h4>
+              <hr />
+
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <h3>get year:</h3>
+                  <br />
+                  <b> time1.getTime("y");</b><br /><br />
+                  The output will be:<br />
+                  <h3 id="get1"></h3>
+                </li>
+                <li class="list-group-item">
+                  <h3>get month:</h3>
+                  <br />
+                  <b> time1.getTime("M");</b><br /><br />
+                  The output will be:<br />
+                  <h3 id="get2"></h3>
+                </li>
+                <li class="list-group-item">
+                  <h3>get day:</h3>
+                  <br />
+                  <b> time1.getTime("d");</b><br /><br />
+                  The output will be:<br />
+                  <h3 id="get3"></h3>
+                </li>
+                <li class="list-group-item">
+                  <h3>get hour:</h3>
+                  <br />
+                  <b> time1.getTime("h");</b><br /><br />
+                  The output will be:<br />
+                  <h3 id="get4"></h3>
+                </li>
+                <li class="list-group-item">
+                  <h3>get minute:</h3>
+                  <br />
+                  <b> time1.getTime("m");</b><br /><br />
+                  The output will be:<br />
+                  <h3 id="get5"></h3>
+                </li>
+
+                <li class="list-group-item">
+                  <h3>get second:</h3>
+                  <br />
+                  <b> time1.getTime("s");</b><br /><br />
+                  The output will be:<br />
+                  <h3 id="get6"></h3>
+                </li>
+
+                <li class="list-group-item">
+                  <h3>get timezone:</h3>
+                  <br />
+                  <b> time1.getTime("t");</b><br /><br />
+                  The output will be:<br />
+                  <h3 id="get7"></h3>
+                </li>
+              </ul>
+            </div>
+
+            <div class="alert alert-success" role="alert">
+              <h4 class="alert-heading">
+                convertTime() method:
+              </h4>
+              <hr />
+
+              <ul class="list-group">
+                <li class="list-group-item">
+                  Here we change the current time in your timezone to (GMT +8) ,
+                  After Converting it will return a Time object with converted
+                  time <br />
+                  <b> const Converted = time1.convertTime(8);</b><br /><br />
+                  The converted time will be: (Converted.format("yyyy-MM-dd
+                  hh:mm:ss");)<br />
+                  <h3 id="convertTime"></h3>
+                </li>
+              </ul>
+            </div>
+
+            <div class="alert alert-success" role="alert">
+              <h4 class="alert-heading">
+                getUTCtime() method:
+              </h4>
+              <hr />
+
+              <ul class="list-group">
+                <li class="list-group-item">
+                  Here we change the current time in your timezone to UTC time ,
+                  After Converting it will return a object with converted time
+                  <br />
+                  <b> const Converted = time1.getUTCtime(); </b><br /><br />
+                  The converted time will be: (Converted.format("yyyy-MM-dd
+                  hh:mm:ss");)<br />
+                  <h3 id="utcTime"></h3>
+                </li>
+              </ul>
+            </div>
+
+            <div class="alert alert-success" role="alert">
+              <h4 class="alert-heading">
+                getWeekDay() method:
+              </h4>
+              <hr />
+
+              <ul class="list-group">
+                <li class="list-group-item">
+                  get WeekDay information <br />
+                  <b> time1.getWeekday();; </b><br /><br />
+                  The output will be: <br />
+                  <h3 id="wdwd"></h3>
+                </li>
+              </ul>
+            </div>
+            <div class="alert alert-success" role="alert">
+              <h4 class="alert-heading">
+                add() method:
+              </h4>
+              <hr />
+
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <h3>add one year:</h3>
+                  <br />
+                  <b> time1.add(1, "y");</b><br />
+                </li>
+                <li class="list-group-item">
+                  <h3>add one minute:</h3>
+                  <br />
+                  <b> time1.add(1, "M")</b><br />
+                </li>
+                <li class="list-group-item">
+                  <h3>add one day:</h3>
+                  <br />
+                  <b> time1.add(1, "d");</b><br />
+                </li>
+                <li class="list-group-item">
+                  <h3>add one hour:</h3>
+                  <br />
+                  <b> time1.add(1, "h");</b><br />
+                </li>
+                <li class="list-group-item">
+                  <h3>add one minute:</h3>
+                  <br />
+                  <b>time1.add(1, "m");</b><br />
+                </li>
+                <li class="list-group-item">
+                  <h3>add one second:</h3>
+                  <br />
+                  <b> time1.add(1, "s");</b><br />
+                </li>
+                <li class="list-group-item">
+                  <h3>add one timezone :</h3>
+                  notice here if timezone number is greater than 12, it does not
+                  change anything
+                  <br />
+                  <b> time1.add(1, "t");</b><br />
+                </li>
+
+                <li class="list-group-item">
+                  <h3>Add before:</h3>
+                  (time1.format("yyyy-MM-dd hh:mm:ss");)
+                  <br />
+                  <h3 id="addbefore"></h3>
+                  <br />
+                  <h3>After:</h3>
+                  (time1.format("yyyy-MM-dd hh:mm:ss");
+                  <br />time1.getTime("t"))
+                  <br />
+                  <h3 id="addme"></h3>
+                  <h3 id="tzafter"></h3>
+                </li>
+              </ul>
+            </div>
+
+            <div class="alert alert-success" role="alert">
+              <h4 class="alert-heading">
+                subtract() method:
+              </h4>
+              <hr />
+
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <h3>subtract one year:</h3>
+                  <br />
+                  <b> time1.subtract(1, "y");</b><br />
+                </li>
+                <li class="list-group-item">
+                  <h3>subtract one minute:</h3>
+                  <br />
+                  <b> time1.subtract(1, "M")</b><br />
+                </li>
+                <li class="list-group-item">
+                  <h3>subtract one day:</h3>
+                  <br />
+                  <b> time1.subtract(1, "d");</b><br />
+                </li>
+                <li class="list-group-item">
+                  <h3>subtract one hour:</h3>
+                  <br />
+                  <b> time1.subtract(1, "h");</b><br />
+                </li>
+                <li class="list-group-item">
+                  <h3>subtract one minute:</h3>
+                  <br />
+                  <b>time1.subtract(1, "m");</b><br />
+                </li>
+                <li class="list-group-item">
+                  <h3>subtract one second:</h3>
+                  <br />
+                  <b> time1.subtract(1, "s");</b><br />
+                </li>
+                <li class="list-group-item">
+                  <h3>subtract one timezone :</h3>
+                  notice here if timezone number is less than -11, it does not
+                  change anything
+                  <br />
+                  <b> time1.subtract(1, "t");</b><br />
+                </li>
+
+                <li class="list-group-item">
+                  <h3>Subtract before:</h3>
+                  (time1.format("yyyy-MM-dd hh:mm:ss");)
+                  <br />
+                  <h3 id="subbefore"></h3>
+                  <br />
+                  <h3>After:</h3>
+                  (time1.format("yyyy-MM-dd hh:mm:ss");
+                  <br />time1.getTime("t"))
+                  <br />
+                  <h3 id="subafter"></h3>
+                  <h3 id="subtzafter"></h3>
+                </li>
+              </ul>
+            </div>
+
+            <div class="alert alert-success" role="alert">
+              <h4 class="alert-heading">
+                nextWeekday() method:
+              </h4>
+              <hr />
+
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <h3>Get Next Friday:</h3>
+                  <br />
+                  <b> time1.nextWeekday("Friday");</b><br /><br />
+                  The output with format("yyyy-MM-dd") will be:<br />
+                  <h3 id="nw"></h3>
+                </li>
+              </ul>
+            </div>
+
+            <div class="alert alert-success" role="alert">
+              <h4 class="alert-heading">
+                timeBetween() method:
+              </h4>
+              <hr />
+
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <h3>in days:</h3>
+                  <br />
+                  <b> time1.timeBetween(time2, "d");</b><br /><br />
+                  The output will be:<br />
+                  <h3 id="bet1"></h3>
+                </li>
+                <li class="list-group-item">
+                  <h3>in hours:</h3>
+                  <br />
+                  <b> time1.timeBetween(time2, "h");</b><br /><br />
+                  The output will be:<br />
+                  <h3 id="bet2"></h3>
+                </li>
+                <li class="list-group-item">
+                  <h3>in minutes:</h3>
+                  <br />
+                  <b> time1.timeBetween(time2, "m");</b><br /><br />
+                  The output will be:<br />
+                  <h3 id="bet3"></h3>
+                </li>
+              </ul>
+            </div>
+
+            <div class="alert alert-success" role="alert">
+              <h4 class="alert-heading">
+                beginningOf() / endOf() method:
+              </h4>
+              <hr />
+
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <h3>time past by today:</h3>
+                  <br />
+                  <b> time1.beginningOf("d");</b><br /><br />
+                  The output will be:<br />
+                  <h3 id="b1"></h3>
+                </li>
+                <li class="list-group-item">
+                  <h3>time past by current hour:</h3>
+                  <br />
+                  <b>time1.beginningOf("h");</b><br /><br />
+                  The output will be:<br />
+                  <h3 id="b2"></h3>
+                </li>
+                <li class="list-group-item">
+                  <h3>time left today:</h3>
+                  <br />
+                  <b> time1.endOf("d");</b><br /><br />
+                  The output will be:<br />
+                  <h3 id="e1"></h3>
+                </li>
+
+                <li class="list-group-item">
+                  <h3>time left this hour:</h3>
+                  <br />
+                  <b> time1.endOf("h");</b><br /><br />
+                  The output will be:<br />
+                  <h3 id="e2"></h3>
+                </li>
+              </ul>
+            </div>
+            <a href="#TOP">
+              <button type="button" class="btn btn-warning">
+                Go Back To The Top
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <a name="DOM"></a>
+    <br />
+    <br />
+    <br />
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col">
+            <h1>DOM manipulations:</h1>
+            <div class="alert alert-primary" role="alert">
+              <h4 class="alert-heading">
+                Constructor (Read the instructions in the examples)
+              </h4>
+              <hr />
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <b>World Time Map::</b><br />
+                  const map = new WmapGenerator();<br />
+                  <br />
+                  <b>Add the world map to the DOM:</b><br />
+                  map.addAll();<br />
+                </li>
+                <li class="list-group-item">
+                  <b>Simple Timezone converter:<br /></b>
+                  const converter = new converterGenerator();<br />
+                  <br />
+                  <b>Add the Timezone converter to the DOM:<br /></b>
+                  conveter.addAll();<br />
+                </li>
+                <li class="list-group-item">
+                  <b>Major city time visual representation:<br /></b>
+                  const cityTime = new CTGenerator();<br />
+                  <br />
+
+                  <b
+                    >Add the Major city time representation to the DOM:<br
+                  /></b>
+                  cityTime.addAll();<br />
+                </li>
+                <li class="list-group-item">
+                  <b>Major country time visual representation:<br /> </b>
+                  const countryTime = new CapGenerator(); <br />
+                  <br />
+
+                  <b
+                    >Add the Major country time visual representation to the
+                    DOM:<br />
+                  </b>
+                  countryTime.addAll(); <br />
+                </li>
+                <li class="list-group-item">
+                  <b>StopWatch:<br /> </b>
+                  const stopwatch = new StopWatchGenerator(); <br />
+                  <br />
+
+                  <b>Add the StopWatch to the DOM:<br /> </b>
+                  stopwatch.addAll(); <br />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="row align-items-center">
+          <div class="col">
+            <div class="card mb-3">
+              <img src="./assets/Timer.png" class="card-img-top" alt="Timer" />
+              <div class="card-body">
+                <h5 class="card-title">Simple StopWatch</h5>
+                <br />
+                <a href="./TimerGenerator.html">
+                  <button type="button" class="btn btn-dark btn-large">
+                    Learn More
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card mb-3">
+              <img
+                src="./assets/Converter.png"
+                class="card-img-top"
+                alt="Converter"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Simple Timezone converter</h5>
+                <br />
+                <a href="./converterGenerator.html">
+                  <button type="button" class="btn btn-dark btn-large">
+                    Learn More
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row align-items-center">
+          <div class="col">
+            <div class="card mb-3">
+              <img src="./assets/City.png" class="card-img-top" alt="City" />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Major city time visual representation
+                </h5>
+                <br />
+                <a href="./CTGenerator.html">
+                  <button type="button" class="btn btn-dark btn-large">
+                    Learn More
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-3">
+              <img
+                src="./assets/Country.png"
+                class="card-img-top"
+                alt="Country"
+              />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Major country time visual representation
+                </h5>
+                <br />
+                <a href="./CapGenerator.html">
+                  <button type="button" class="btn btn-dark btn-large">
+                    Learn More
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row align-items-center">
+          <div class="col">
+            <div class="card mb-3">
+              <img src="./assets/Map.png" class="card-img-top" alt="Map" />
+              <div class="card-body">
+                <h5 class="card-title">World Time Map</h5>
+                <br />
+                <a href="./WmapGenerator.html">
+                  <button type="button" class="btn btn-dark btn-large">
+                    Learn More
+                  </button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col">
+            <h1>Checkout on the Github</h1>
+            <a href="https://github.com/NikoNiconi">
+              <i class="fa fa-github-square fa-5x" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

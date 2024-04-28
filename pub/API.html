@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>API</title>
+    <link rel="icon" href="./assets/Icon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="./assets/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <nav class="py-3 navbar navbar-expand-lg fixed-top auto-hiding-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">
+          <img class="logo" src="./assets/logo.png" /> Time Turner
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./API.html">API</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./examples.html">Examples</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./Time-Turner.zip" download>Download</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col">
+            <img src="./assets/Time.jpg" class="img-fluid" alt="Time" />
+          </div>
+          <div class="col text-col">
+            <h1>API</h1>
+            <p>
+              In this page there will be introduction of how to use the library,
+              explanation to Time Object, its methods and five DOM Manipulation
+              Generator : <br />
+              (World time map (DOM manipulations), <br />
+              Simple time zone converter (DOM manipulations), <br />
+              Major city time visual representation( DOM manipulations), <br />
+              Major country time visual representation (DOM manipulations)
+              <br />
+              StopWatch (DOM manipulations) ).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col text-col">
+            <h1>
+              Getting Started
+            </h1>
+
+            <div class="alert alert-warning" role="alert">
+              <h4 class="alert-heading">First: Download the library js file</h4>
+              <hr />
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <b
+                    >You can click "Download" on the navbar to download
+                    "Time-Turner.zip" file</b
+                  >
+                  <br />
+                  <img src="./assets/D.png" /><br />
+                  <b>
+                    Decompress the file you will get a folder named
+                    "Time-Turner" which has src folder and the Time-Turner.js
+                    (which is the library js file) in it. You can choose to move
+                    the whole Time-Turner folder or the src folder and the js
+                    file to your workplace. But please notice the src folder and
+                    the js file must stay together (in the same path). (Strongly
+                    recommend to move the folder since you may already have a
+                    src folder for your project in your workplace) No external
+                    library is required to install for Time-Turner.</b
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="alert alert-warning" role="alert">
+              <h4 class="alert-heading">Second: Setup the library to HTML</h4>
+              <hr />
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <b
+                    >After finishing the step above. You can load the js library
+                    to your HTML file(s). What you need to do is put this line
+                    of code to your HTML file in the header. (Path may be
+                    different)</b
+                  >
+                  <br />
+                </li>
+                <li class="list-group-item">
+                  &ltscript> defer type="text/javascript" src="./Time-Turner.js"
+                  &lt/script>
+                  <br />
+                </li>
+                <li class="list-group-item">
+                  <b
+                    >Notice here the src path is where you put your
+                    Time-Turner.js.
+                  </b>
+                </li>
+              </ul>
+            </div>
+
+            <div class="alert alert-warning" role="alert">
+              <h4 class="alert-heading">Start using the library</h4>
+              <hr />
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <b
+                    >You have finished all the steps to set up the Time-Turner
+                    library. In order to use the library correctly please read
+                    the instruction below and look at the example page.</b
+                  >
+                  <br />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col text-col">
+            <h1>Time Object</h1>
+            <div class="alert alert-info" role="alert">
+              <h4 class="alert-heading">Constructor</h4>
+              <hr />
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <b
+                    >Time Object can take up to 8 arguments and there are
+                    different ways to create the Time Object. All of the way to
+                    create the Object is list below. Please read the following
+                    carefully.</b
+                  ><br />
+                </li>
+                <li class="list-group-item">
+                  <b>current time with current time zone:</b><br />
+                  const time1 = new Time();<br />
+                </li>
+                <li class="list-group-item">
+                  <b
+                    >Setting time with a date String with current time zone:<br
+                  /></b>
+                  const time2 = new Time("July 7, 2020 00:00:00");<br />
+                </li>
+                <li class="list-group-item">
+                  <b
+                    >Setting time with a date String with given time zone (last
+                    number):<br
+                  /></b>
+                  const time3 = new Time("July 7, 2020 00:00:00", -4);<br />
+                </li>
+                <li class="list-group-item">
+                  <b
+                    >Setting time with given exact information with current time
+                    zone:<br />
+                    (year, MONTH INDEX (0 for Jan, 1 for Feb ....), day, hours,
+                    minutes, seconds, milliseconds)<br
+                  /></b>
+                  const time4 = new Time(2020, 6, 7, 0, 0, 0, 0);<br />
+                </li>
+                <li class="list-group-item">
+                  <b
+                    >Setting time with given exact information with given time
+                    zone (last number): <br />(year, MONTH INDEX (0 for Jan, 1
+                    for Feb ....), day, hours, minutes, seconds, milliseconds,
+                    time zone)<br
+                  /></b>
+                  const time5 = new Time(2020, 6, 7, 0, 0, 0, 0, -4);
+                </li>
+              </ul>
+            </div>
+            <div class="alert alert-info" role="alert">
+              <h4 class="alert-heading">Property</h4>
+              <hr />
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <b>date </b>: A Date() Object <br />
+                  <b>Type: </b> Date()
+                </li>
+                <li class="list-group-item">
+                  <b>timezone</b>: the time zone number <br />
+                  <b>Type: </b> Number
+                </li>
+              </ul>
+            </div>
+            <div class="alert alert-info" role="alert">
+              <h4 class="alert-heading">Methods</h4>
+              <hr />
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <b>format(a) method:</b><br />
+                  <b
+                    >Argument: <br />
+                    (String) format method take 1 argument which can be any
+                    combinations with any symbol between them of
+                    ("y","M","d","h","m","s","t") which represent (year, Month,
+                    day, hour, minute, second, time zone) For example :
+                    yyyy-MM-dd hh:mm:ss <br
+                  /></b>
+
+                  <b
+                    >Return value: <br />
+                    (String) format method will return a string represent the
+                    time with the format that user chose.<br
+                  /></b>
+
+                  format Time in different ways (yyyy represent years, MM
+                  represent month, ss represent seconds the symbol or
+                  combination between them are up to users)
+                </li>
+                <li class="list-group-item">
+                  <b>setTime(a, b) method:</b><br />
+
+                  <b
+                    >Argument: <br />
+                    (String, Number) setTime(a,b) method take 2 arguments, the
+                    first one represents the (y, M ,d ,h, m ,s ,t) users want to
+                    change. The second one represents which number user want it
+                    to be. (Notice here it is not allowed to change the time
+                    zone less than -11 or greater than 12)<br
+                  /></b>
+
+                  <b
+                    >Return value: <br />
+                    Nothing. The Time object's date/time zone will changed<br
+                  /></b>
+                  Set Date information (Year (y), Month(M), Date(d), Hours(h),
+                  Minutes(m), Seconds(s), Time zone(t))
+                </li>
+                <li class="list-group-item">
+                  <b>getTime(a) method:</b><br />
+
+                  <b
+                    >Argument: <br />
+                    (String) getTime(a) method take 1 arguments, represent the
+                    (y, M ,d ,h, m ,s ,t) users want to get.<br
+                  /></b>
+
+                  <b
+                    >Return value: <br />
+                    (Number/String) It will return Number except for time zone,
+                    for time zone it will return "GMT" + the time zone number<br
+                  /></b>
+
+                  Get Time information (Year (y), Month(M), Date(d), Hours(h),
+                  Minutes(m), Seconds(s), Time zone(t))
+                </li>
+                <li class="list-group-item">
+                  <b>convertTime(a) method:</b><br />
+                  <b
+                    >Argument: <br />
+                    (Number) convertTime(a) method take 1 arguments, represent
+                    the time zone number user want to change. <br
+                  /></b>
+
+                  <b
+                    >Return value: <br />
+                    (Time()) It will return a new Time() object with converted
+                    time and given time zone. (Note here it will return null if
+                    user enters invalid time zone number. (greater than 12 or
+                    less than -11)<br
+                  /></b>
+                  Convert Date and time between different Time zone return a new
+                  Time() Object
+                </li>
+                <li class="list-group-item">
+                  <b>getUTCtime() method:</b><br />
+                  <b
+                    >Argument: <br />
+                    No argument needed for this method <br
+                  /></b>
+
+                  <b
+                    >Return value: <br />
+                    (Time()) It will return a new Time() object with UTC-0 Time
+                    with UTC-0 timezone<br
+                  /></b>
+                  Get the UTC time of the given Time Object return a new Time()
+                  Object
+                </li>
+                <li class="list-group-item">
+                  <b>getWeekDay() method:</b><br />
+                  <b
+                    >Argument: <br />
+                    No argument needed. <br
+                  /></b>
+
+                  <b
+                    >Return value: <br />
+                    (String) It will return a string represent the current
+                    weekday of the given Time Object<br
+                  /></b>
+                  Get weekdays information (Monday- Friday)
+                </li>
+                <li class="list-group-item">
+                  <b>add(a, b) method:</b><br />
+                  <b
+                    >Argument: <br />
+                    (Number, String) add(a,b) method take 2 arguments, The first
+                    one represent which number user want it to be. (Notice here
+                    it's not allowed to have the time zone less than -11 or
+                    greater than 12) it will log(not available) to the console.
+                    the second one represent the (M ,d ,h, m ,s ,t) users want
+                    to add.</b
+                  >
+                  <br />
+                  <b
+                    >Return value: <br />
+                    No return value. It will add to the time of the given
+                    Time<br
+                  /></b>
+                  Calculation (add days/hours/minutes/seconds/time zone)
+                </li>
+                <li class="list-group-item">
+                  <b>subtract(a, b) method:</b><br />
+                  <b
+                    >Argument: <br />
+                    (Number, String) subtract(a,b) method take 2 arguments, The
+                    first one represent which number user want it to be. (Notice
+                    here it's not allowed to have the time zone less than -11 or
+                    greater than 12) it will log(not available) to the console.
+                    the second one represent the (M ,d ,h, m ,s ,t) users want
+                    to subtract.</b
+                  >
+                  <br />
+                  <b
+                    >Return value: <br />
+                    No return value. It will subtract the time of the given
+                    Time<br
+                  /></b>
+                  Calculation (subtract days/hours/minutes/seconds/time zone)
+                </li>
+
+                <li class="list-group-item">
+                  <b>nextWeekday(a) method:</b><br />
+                  <b
+                    >Argument: <br />
+                    (String) nextWeekday(a) take one argument, which is the
+                    string of the weekday user want to get. (notice here the
+                    first letter must be upper case and the rest must be lower
+                    case ex: Monday)</b
+                  >
+                  <br />
+                  <b
+                    >Return value: <br />
+                    (Time()) A new Time Object which is the next weekday user
+                    want to get<br
+                  /></b>
+                </li>
+
+                <li class="list-group-item">
+                  <b>timeBetween(a, b) method:</b><br />
+                  <b>
+                    Argument: <br />
+                    (Time(), Srting) timeBetween(a,b) take two argument. The
+                    first one is the Time object user want to compared. If it's
+                    not the same time zone as user's it will convert to the same
+                    first. The second argument is the unit user want to see. It
+                    can be in (days, hours, minutes) (d ,h, m)</b
+                  >
+                  <br />
+                  <b
+                    >Return value: <br />
+                    (Number) The number of (d ,h ,m) between a and b <br
+                  /></b>
+                  Time between current time object and another time object ,
+                  compared in (days, hours, minutes)
+                </li>
+                <li class="list-group-item">
+                  <b>beginningOf(a) / endOf(a) method:</b><br />
+
+                  <b>
+                    Argument: <br />
+                    (String) beginngOf/endof(a) take one argument. It represent
+                    the end of a. a can be d for day, h for hour.</b
+                  >
+                  <br />
+                  <b
+                    >Return value: <br />
+                    (Number) It will return a number represent how many minutes
+                    between now and the beginngOf/endof user's choice. (h/d). It
+                    will also log a message to the console as well<br
+                  /></b>
+
+                  Time between now(the given Time() object) and the start/end of
+                  day/hour (output are in minutes)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col text-col">
+            <h1>
+              DOM manipulations (See Exampeles for more details)
+            </h1>
+            <div class="alert alert-info" role="alert">
+              <h4 class="alert-heading">World Time Map (WmapGenerator):</h4>
+              <hr />
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <b>It will added to the buttom of the page</b> <br />
+                  <b>Constructor: </b>const map = new WmapGenerator(); <br />
+                  <b>addAll(): </b>Add the world map to the DOM <br />
+                  map.addAll()
+                </li>
+              </ul>
+            </div>
+
+            <div class="alert alert-info" role="alert">
+              <h4 class="alert-heading">
+                Simple Timezone converter (converterGenerator):
+              </h4>
+              <hr />
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <b>It will added to the buttom of the page</b> <br />
+                  <b>Constructor: </b>const converter = new
+                  converterGenerator(); <br />
+                  <b>addAll(): </b>Add the Timezone converter to the DOM <br />
+                  conveter.addAll()
+                </li>
+              </ul>
+            </div>
+
+            <div class="alert alert-info" role="alert">
+              <h4 class="alert-heading">
+                Major city time visual representation (CTGenerator):
+              </h4>
+              <hr />
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <b>It will added to the buttom of the page</b> <br />
+                  <b>Constructor: </b>const cityTime = new CTGenerator(); <br />
+                  <b>addAll(): </b>Add the Major city time representation to the
+                  DOM <br />
+                  cityTime.addAll();
+                </li>
+              </ul>
+            </div>
+
+            <div class="alert alert-info" role="alert">
+              <h4 class="alert-heading">
+                Major country time visual representation (CapGenerator):
+              </h4>
+              <hr />
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <b>It will added to the buttom of the page</b> <br />
+                  <b>Constructor: </b>const countryTime = new CapGenerator();
+                  <br />
+                  <b>addAll(): </b>Add the Major country time visual
+                  representation to the DOM<br />
+                  countryTime.addAll();
+                </li>
+              </ul>
+            </div>
+
+            <div class="alert alert-info" role="alert">
+              <h4 class="alert-heading">StopWatch (StopWatchGenerator):</h4>
+              <hr />
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <b>It will added to the buttom of the page</b> <br />
+                  <b>Constructor: </b>const stopwatch = newStopWatchGenerator();
+                  <br />
+                  <b>addAll(): </b>Add the stopwatch to the DOM <br />
+                  stopwatch.addAll()
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col">
+            <h1>Checkout on the Github</h1>
+            <a href="https://github.com/NikoNiconi">
+              <i class="fa fa-github-square fa-5x" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
